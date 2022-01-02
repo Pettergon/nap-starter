@@ -1,6 +1,14 @@
 import { gql, ApolloServer } from 'apollo-server-micro';
+import { PrismaClient } from '@prisma/client';
 
-const typeDefs = gql``;
+const prisma = new PrismaClient();
+
+const typeDefs = gql`
+  type User {
+    id: String
+    email: string
+  }
+`;
 
 const resolvers = {};
 
