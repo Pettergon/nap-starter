@@ -17,4 +17,12 @@ model User {
   createdAt DateTime @default(now())
   lastLogin DateTime @updatedAt
   verified Boolean     @default(false)
+  // role ROle @default(USER)
 }
+
+// enum Role{
+//  USER
+//  ADMIN
+//}
+
+// sqlite does not support enums
