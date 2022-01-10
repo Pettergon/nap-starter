@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgres"
   url      = env("DATABASE_URL")
 }
 
@@ -17,12 +17,12 @@ model User {
   createdAt DateTime @default(now())
   lastLogin DateTime @updatedAt
   verified Boolean     @default(false)
-  // role ROle @default(USER)
+  role Role @default(USER)
 }
 
-// enum Role{
-//  USER
-//  ADMIN
-//}
+enum Role{
+  USER
+  ADMIN
+}
 
 // sqlite does not support enums
