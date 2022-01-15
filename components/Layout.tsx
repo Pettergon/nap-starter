@@ -1,7 +1,5 @@
-import type { NextPage } from 'next';
-
-const Layout = props => {
-  return <>{props.children}</>;
+const Layout = ({ children }: any) => {
+  return <>{children}</>;
 };
 
 export default Layout;
