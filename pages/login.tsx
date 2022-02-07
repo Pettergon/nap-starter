@@ -7,16 +7,4 @@ const Login: NextPage = () => {
   return <></>;
 };
 
-export const getStaticProps = async context => {
-  // ...
-};
-
-export const getStaticPaths = async () => {
-  // ...
-};
-
-export const getServerSideProps = async context => {
-  // ...
-};
-
 export default Login;
