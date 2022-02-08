@@ -4,7 +4,14 @@ import path from 'path';
 
 const Query = queryType({
   definition(t) {
-    t.string('hello', { resolve: () => 'hello world' });
+    t.list.field('allUsers', {
+      type: 'User',
+      resolve(_parent, _args, ctx) {
+        return ctx.prisma.user.findMany({});
+      }
+    });
+    t.crud.user();
+    t.crud.users();
   }
 });
 
