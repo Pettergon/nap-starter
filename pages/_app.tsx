@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: '/api'
+  uri: '/api/graphql'
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
