@@ -1,12 +1,8 @@
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client';
+import client from '../lib/apollo';
 import type { AppProps } from 'next/app';
-
-const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  uri: '/api/graphql'
-});
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
