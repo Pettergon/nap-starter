@@ -15,6 +15,8 @@
     "@nexus/schema": "^0.20.1",
     "@prisma/client": "^3.7.0",
     "apollo-server-micro": "^3.6.1",
+    "graphql": "^16.3.0",
+    "micro": "^9.3.4",
     "next": "12.0.7",
     "nexus": "^1.1.0",
     "nexus-plugin-prisma": "^0.35.0",
