@@ -18,23 +18,15 @@ const Query = queryType({
 });
 
 export const schema = makeSchema({
-  types: [Query],
-  plugins: [nexusPrisma({ experimentalCRUD: true })],
+  types: [Query, Mutation, Post, User, GQLDate],
   outputs: {
-    typegen: path.join(process.cwd(), 'generated', 'nexus-typegen.ts'),
-    schema: path.join(process.cwd(), 'generated', 'schema.graphql')
-  },
-  typegenAutoConfig: {
-    contextType: 'Context.Context',
-    sources: [
-      {
-        source: '@prisma/client',
-        alias: 'prisma'
-      },
-      {
-        source: path.join(process.cwd(), 'graphql', 'context.ts'),
-        alias: 'Context'
-      }
-    ]
+    typegen: path.join(process.cwd(), 'generated/nexus-typegen.ts'),
+    schema: path.join(process.cwd(), 'generated/schema.graphql')
   }
 });
+
+export const config = {
+  api: {
+    bodyParser: false
+  }
+};
