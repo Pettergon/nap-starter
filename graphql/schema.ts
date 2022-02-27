@@ -17,6 +17,14 @@ const Query = queryType({
   }
 });
 
+const Mutation;
+
+const Post;
+
+const User;
+
+const GQLDate;
+
 export const schema = makeSchema({
   types: [Query, Mutation, Post, User, GQLDate],
   outputs: {
